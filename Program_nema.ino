@@ -1,4 +1,5 @@
 // definisiin pin
+#define servo 11
 #define dir 48
 #define step 7
 #define enable 6
