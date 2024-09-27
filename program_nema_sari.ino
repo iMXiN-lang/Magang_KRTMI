@@ -1,9 +1,14 @@
-// definisiin pin
+#include <Servo.h>
+Servo myServo;
+int pinServo = 11;
+int muter = 1;
+
 #define dir 48
 #define step 7
 #define enable 6
 
 void setup() {
+  myServo.attach(11); 
   pinMode(dir, OUTPUT);
   pinMode(enable, OUTPUT);
   pinMode(step, OUTPUT);
@@ -12,6 +17,20 @@ void setup() {
 }
 
 void loop() {
+	while(muter <= 10){
+  		for(int i = 0; i < 180; i++) 
+  		{ 
+   		myServo.write(i); 
+   		delay(10); 
+  		}
+  		for(int i = 180; i >=1; i--) 
+  		{
+   		myServo.write(i); 
+   		delay(10); 
+  		}
+      muter++;
+   	}
+
   digitalWrite(dir, LOW); // buat setel arahnya
   for(int i = 0; i <= 8000; i++) { // 90 derajat
     digitalWrite(step, HIGH); //high searah jarum jam
