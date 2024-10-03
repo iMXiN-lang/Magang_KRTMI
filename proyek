@@ -1,0 +1,98 @@
+//motor1
+#define RPWM_1 1  // Pin PWM untuk arah kanan
+#define LPWM_1 2  // Pin PWM untuk arah kiri
+#define REN_1  3  // Pin enable untuk arah kanan
+#define LEN_1  4  // Pin enable untuk arah kiri
+//motor2
+#define RPWM_2 5  // Pin PWM untuk arah kanan
+#define LPWM_2 6  // Pin PWM untuk arah kiri
+#define REN_2 7  // Pin enable untuk arah kanan
+#define LEN_2  8  // Pin enable untuk arah kiri
+//motor3
+#define RPWM_3 9  // Pin PWM untuk arah kanan
+#define LPWM_3 10  // Pin PWM untuk arah kiri
+#define REN_3 11  // Pin enable untuk arah kanan
+#define LEN_3  12  // Pin enable untuk arah kiri
+// motor4
+#define RPWM_4 13  // Pin PWM untuk arah kanan
+#define LPWM_4 14  // Pin PWM untuk arah kiri
+#define REN_4 15  // Pin enable untuk arah kanan
+#define LEN_4  16  // Pin enable untuk arah kiri
+void setup() {
+  // Mengatur pin sebagai output
+  pinMode(RPWM_1, OUTPUT);
+  pinMode(LPWM_1, OUTPUT);
+  pinMode(REN_1, OUTPUT);
+  pinMode(LEN_1, OUTPUT);
+  
+  // Mengaktifkan pin enable
+  digitalWrite(REN_1, HIGH);
+  digitalWrite(LEN_1, HIGH);
+}
+
+void loop() {
+  // Menggerakkan motor maju
+  for (int i=0; i<=255;i+=2){
+    //motor1
+    analogWrite(RPWM_1, i); // Kecepatan maksimum
+    analogWrite(LPWM_1, 0);   // Tidak ada sinyal untuk arah kiri
+    //motor2
+    analogWrite(RPWM_2, i); // Kecepatan maksimum
+    analogWrite(LPWM_2, 0);   // Tidak ada sinyal untuk arah kiri
+    //motor3
+    analogWrite(RPWM_3, 0);   // Tidak ada sinyal untuk arah kanan
+    analogWrite(LPWM_3, i); // Kecepatan maksimum
+    //motor4
+    analogWrite(RPWM_4, 0);   // Tidak ada sinyal untuk arah kanan
+    analogWrite(LPWM_4, i); // Kecepatan maksimum
+  }
+  delay(5000);            // Bergerak mundur selama 2 detik
+  // Menggerakkan motor mundur  
+  for (int i=0; i<=255;i+=2){
+    //motor1
+    analogWrite(RPWM_1, 0); // Kecepatan maksimum
+    analogWrite(LPWM_1, i);   // Tidak ada sinyal untuk arah kiri
+    //motor2
+    analogWrite(RPWM_2, 0); // Kecepatan maksimum
+    analogWrite(LPWM_2, i);   // Tidak ada sinyal untuk arah kiri
+    //motor3
+    analogWrite(RPWM_3, i);   // Tidak ada sinyal untuk arah kanan
+    analogWrite(LPWM_3, 0); // Kecepatan maksimum
+    //motor4
+    analogWrite(RPWM_4, i);   // Tidak ada sinyal untuk arah kanan
+    analogWrite(LPWM_4, 0); // Kecepatan maksimum
+  }
+  delay(5000); 
+  // Menggerakkan motor berlawanan arah jarum jam
+  for (int i=0; i<=255;i+=2){
+    //motor1
+    analogWrite(RPWM_1, 0); // Kecepatan maksimum
+    analogWrite(LPWM_1, i);   // Tidak ada sinyal untuk arah kiri
+    //motor2
+    analogWrite(RPWM_2, 0); // Kecepatan maksimum
+    analogWrite(LPWM_2, i);   // Tidak ada sinyal untuk arah kiri
+    //motor3
+    analogWrite(RPWM_3, 0);   // Tidak ada sinyal untuk arah kanan
+    analogWrite(LPWM_3, i); // Kecepatan maksimum
+    //motor4
+    analogWrite(RPWM_4, 0);   // Tidak ada sinyal untuk arah kanan
+    analogWrite(LPWM_4, i); // Kecepatan maksimum
+  }
+  delay(5000);
+  // Menggerakkan motor searah jarum jam 
+  for (int i=0; i<=255;i+=2){
+    //motor1
+    analogWrite(RPWM_1, i); // Kecepatan maksimum
+    analogWrite(LPWM_1, 0);   // Tidak ada sinyal untuk arah kiri
+    //motor2
+    analogWrite(RPWM_2, i); // Kecepatan maksimum
+    analogWrite(LPWM_2, 0);   // Tidak ada sinyal untuk arah kiri
+    //motor3
+    analogWrite(RPWM_3, i);   // Tidak ada sinyal untuk arah kanan
+    analogWrite(LPWM_3, 0); // Kecepatan maksimum
+    //motor4
+    analogWrite(RPWM_4, i);   // Tidak ada sinyal untuk arah kanan
+    analogWrite(LPWM_4, 0); // Kecepatan maksimum
+  }
+  delay(5000); 
+}
