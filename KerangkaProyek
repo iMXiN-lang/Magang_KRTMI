@@ -1,0 +1,147 @@
+// pin motor 1
+#define REN_1 = 1;
+#define LEN_1 = 2;
+#define RPWM_1 = 3;
+#define LPWM_1 = 4;
+// pin motor 2
+#define REN_2 = 5;
+#define LEN_2 = 6;
+#define RPWM_2 = 7;
+#define LPWM_2 = 8;
+// pin motor 3
+#define REN_3 = 9;
+#define LEN_3 = 10;
+#define RPWM_3 = 11;
+#define LPWM_3 = 12;
+// pin motor 4
+#define REN_4 = 13;
+#define LEN_4 = 14;
+#define RPWM_4 = 15;
+#define LPWM_4 = 16;
+
+void setup(){
+  // output pin motor1
+  pinMode(REN_1, OUTPUT);
+  pinMode(LEN_1, OUTPUT);
+  pinMode(RPWM_1, OUTPUT);
+  pinMode(LPWM_1, OUTPUT);
+
+  // output pin motor2
+  pinMode(REN_2, OUTPUT);
+  pinMode(LEN_2, OUTPUT);
+  pinMode(RPWM_2, OUTPUT);
+  pinMode(LPWM_2, OUTPUT);
+
+  // output pin motor3
+  pinMode(REN_3, OUTPUT);
+  pinMode(LEN_3, OUTPUT);
+  pinMode(RPWM_3, OUTPUT);
+  pinMode(LPWM_3, OUTPUT);
+
+  // output pin motor4
+  pinMode(REN_4, OUTPUT);
+  pinMode(LEN_4, OUTPUT);
+  pinMode(RPWM_4, OUTPUT);
+  pinMode(LPWM_4, OUTPUT);
+}
+
+void loop(){
+// maju
+  analogWrite(RPWM_1, 0);
+  analogWrite(LPWM_1, 255);
+
+  analogWrite(RPWM_2, 255);
+  analogWrite(LPWM_2, 0);
+
+  analogWrite(RPWM_3, 255);
+  analogWrite(LPWM_3, 0);
+  
+  analogWrite(RPWM_4, 0);
+  analogWrite(LPWM_4, 255);
+// mundur
+  analogWrite(RPWM_1, 255);
+  analogWrite(LPWM_1, 0);
+
+  analogWrite(RPWM_2, 0);
+  analogWrite(LPWM_2, 255);
+
+  analogWrite(RPWM_3, 0);
+  analogWrite(LPWM_3, 255);
+  
+  analogWrite(RPWM_4, 255);
+  analogWrite(LPWM_4, 0);
+// kanan
+  analogWrite(RPWM_1, 0);
+  analogWrite(LPWM_1, 255);
+
+  analogWrite(RPWM_2, 0);
+  analogWrite(LPWM_2, 255);
+
+  analogWrite(RPWM_3, 255);
+  analogWrite(LPWM_3, 0);
+  
+  analogWrite(RPWM_4, 255);
+  analogWrite(LPWM_4, 0);
+// kiri
+  analogWrite(RPWM_1, 255);
+  analogWrite(LPWM_1, 0);
+
+  analogWrite(RPWM_2, 255);
+  analogWrite(LPWM_2, 0);
+
+  analogWrite(RPWM_3, 0);
+  analogWrite(LPWM_3, 255);
+  
+  analogWrite(RPWM_4, 0);
+  analogWrite(LPWM_4, 255);
+// serong kanan depan
+  analogWrite(RPWM_1, 0);
+  analogWrite(LPWM_1, 255);
+  
+  analogWrite(RPWM_3, 255);
+  analogWrite(LPWM_3, 0);
+// serong kiri depan
+  analogWrite(RPWM_2, 255);
+  analogWrite(LPWM_2, 0);
+  
+  analogWrite(RPWM_4, 0);
+  analogWrite(LPWM_, 255);
+// serong kanan belakang
+  analogWrite(RPWM_2, 0);
+  analogWrite(LPWM_2, 255);
+  
+  analogWrite(RPWM_4, 255);
+  analogWrite(LPWM_4, 0);
+// serong kiri belakang
+  analogWrite(RPWM_1, 255);
+  analogWrite(LPWM_1, 0);
+  
+  analogWrite(RPWM_3, 0);
+  analogWrite(LPWM_3, 255);
+// muter arah jarum jam
+  analogWrite(RPWM_1, 255);
+  analogWrite(LPWM_1, 0);
+
+  analogWrite(RPWM_2, 255);
+  analogWrite(LPWM_2, 0);
+
+  analogWrite(RPWM_3, 255);
+  analogWrite(LPWM_3, 0);
+  
+  analogWrite(RPWM_4, 255);
+  analogWrite(LPWM_4, 0);
+// muter berlawanan arah jarum jam
+  analogWrite(RPWM_1, 0);
+  analogWrite(LPWM_1, 255);
+
+  analogWrite(RPWM_2, 0);
+  analogWrite(LPWM_2, 255);
+
+  analogWrite(RPWM_3, 0);
+  analogWrite(LPWM_3, 255);
+  
+  analogWrite(RPWM_4, 0);
+  analogWrite(LPWM_4, 255);
+
+
+}
