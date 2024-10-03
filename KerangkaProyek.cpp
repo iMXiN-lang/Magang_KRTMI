@@ -1,25 +1,25 @@
-// pin motor 1
+// pin Driver 1
 #define REN_1 = 1;
 #define LEN_1 = 2;
 #define RPWM_1 = 3;
 #define LPWM_1 = 4;
 #define RIS_1 = 5;
 #define LIS_1 = 6;
-// pin motor 2
+// pin Driver 2
 #define REN_2 = 7;
 #define LEN_2 = 8;
 #define RPWM_2 = 9;
 #define LPWM_2 = 10;
 #define RIS_2 = 11;
 #define LIS_2 = 12;
-// pin motor 3
+// pin Driver 3
 #define REN_3 = 13;
 #define LEN_3 = 14;
 #define RPWM_3 = 15;
 #define LPWM_3 = 16;
 #define RIS_3 = 17;
 #define LIS_3 = 18;
-// pin motor 4
+// pin Driver 4
 #define REN_4 = 19;
 #define LEN_4 = 20;
 #define RPWM_4 = 21;
@@ -28,7 +28,7 @@
 #define LIS_4 = 24;
 
 void setup(){
-  // output pin Driver1
+  // Set up pin Driver 1
   pinMode(REN_1, OUTPUT);
   pinMode(LEN_1, OUTPUT);
   pinMode(RPWM_1, OUTPUT);
@@ -40,7 +40,7 @@ void setup(){
   digitalWrite(RIS_1, LOW);
   digitalWrite(LIS_1, LOW);
 
-  // output pin Driver2
+  // Set up pin Driver 2
   pinMode(REN_2, OUTPUT);
   pinMode(LEN_2, OUTPUT);
   pinMode(RPWM_2, OUTPUT);
@@ -52,7 +52,7 @@ void setup(){
   digitalWrite(RIS_2, LOW);
   digitalWrite(LIS_2, LOW);
 
-  // output pin Driver3
+  // Set up pin Driver 3
   pinMode(REN_3, OUTPUT);
   pinMode(LEN_3, OUTPUT);
   pinMode(RPWM_3, OUTPUT);
@@ -64,7 +64,7 @@ void setup(){
   digitalWrite(RIS_3, LOW);
   digitalWrite(LIS_3, LOW);
 
-  // output pin Drive4
+  // Set up pin Driver 4
   pinMode(REN_4, OUTPUT);
   pinMode(LEN_4, OUTPUT);
   pinMode(RPWM_4, OUTPUT);
@@ -150,7 +150,7 @@ void loop(){
   
   analogWrite(RPWM_3, 0);
   analogWrite(LPWM_3, 255);
-// muter arah jarum jam
+// berputar clockwise
   analogWrite(RPWM_1, 255);
   analogWrite(LPWM_1, 0);
 
@@ -162,7 +162,7 @@ void loop(){
   
   analogWrite(RPWM_4, 255);
   analogWrite(LPWM_4, 0);
-// muter berlawanan arah jarum jam
+// berputar counter-clockwise
   analogWrite(RPWM_1, 0);
   analogWrite(LPWM_1, 255);
 
