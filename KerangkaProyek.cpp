@@ -36,7 +36,7 @@
 
 //PWM
 int A=0;
-int B=255
+int B=255;
 
 void setup(){
   // output pin Driver 1
