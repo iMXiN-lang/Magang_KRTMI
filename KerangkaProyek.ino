@@ -121,6 +121,17 @@ void roda4(int n){
   }
 
 }
+
+void berhenti(){
+  analogWrite(RPWM_1, B);
+  analogWrite(LPWM_1, B);
+  analogWrite(RPWM_2, B);
+  analogWrite(LPWM_2, B);
+  analogWrite(RPWM_3, B);
+  analogWrite(LPWM_3, B);
+  analogWrite(RPWM_4, B);
+  analogWrite(LPWM_4, B);
+}
 void maju(){
   roda1(0);
   roda2(1);
