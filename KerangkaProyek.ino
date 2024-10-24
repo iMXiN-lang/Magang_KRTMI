@@ -6,28 +6,28 @@
 
 
 // pin motor 1
-#define REN_1  9
-#define LEN_1  8
-#define RPWM_1  7
-#define LPWM_1  6
+#define REN_1  23
+#define LEN_1  25
+#define RPWM_1  9
+#define LPWM_1  8
 
 // pin motor 2
-#define REN_2  29
-#define LEN_2  35
-#define RPWM_2  10
-#define LPWM_2  11
+#define REN_2  31
+#define LEN_2  33
+#define RPWM_2  6
+#define LPWM_2  7
 
 // pin motor 3
-#define REN_3  4
-#define LEN_3  5
-#define RPWM_3  37
-#define LPWM_3  39
+#define REN_3  39
+#define LEN_3  41
+#define RPWM_3  4
+#define LPWM_3  5
 
 // pin motor 4
-#define REN_4  3
-#define LEN_4  2
-#define RPWM_4  41
-#define LPWM_4  43
+#define REN_4  47
+#define LEN_4  49
+#define RPWM_4  2
+#define LPWM_4  3
 
 
 //PWM
