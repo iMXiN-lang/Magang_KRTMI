@@ -6,33 +6,33 @@
 
 
 // pin motor 1
-#define REN_1  1
-#define LEN_1  2
-#define RPWM_1  3
-#define LPWM_1  4
+#define REN_1  9
+#define LEN_1  8
+#define RPWM_1  7
+#define LPWM_1  6
 
 // pin motor 2
-#define REN_2  7
-#define LEN_2  8
-#define RPWM_2  9
-#define LPWM_2  10
+#define REN_2  29
+#define LEN_2  35
+#define RPWM_2  10
+#define LPWM_2  11
 
 // pin motor 3
-#define REN_3  13
-#define LEN_3  14
-#define RPWM_3  15
-#define LPWM_3  16
+#define REN_3  4
+#define LEN_3  5
+#define RPWM_3  37
+#define LPWM_3  39
 
 // pin motor 4
-#define REN_4  19
-#define LEN_4  20
-#define RPWM_4  21
-#define LPWM_4  22
+#define REN_4  3
+#define LEN_4  2
+#define RPWM_4  41
+#define LPWM_4  43
 
 
 //PWM
 int A=0;
-int B=255;
+int B=100;
 
 
 
@@ -185,7 +185,10 @@ void MuterKiri(){
   roda4(1);
 }
 void loop(){
-
+  maju();
+  delay(1000);
+  mundur();
+  delay(1000);
 }
 
 // void maju(){
